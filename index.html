@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="grid.css">
   <link rel="stylesheet" href="skeleton.css">
+  <link rel="stylesheet" href="states.css">
 </head>
+
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -70,16 +72,33 @@
 </article>
   </section>
 
+<!-- T-03C: Empty State -->
+<section class="empty-state" aria-label="Empty state">
+  <span class="empty-illustration" aria-hidden="true"></span>
+  <h2>Chưa có dữ liệu</h2>
+  <p>Hiện tại chưa có mục nào để hiển thị. Hãy quay lại sau nhé!</p>
+  </section>
+
+  <!-- T-03C: Error State -->
+<section class="error-state" aria-label="Error state">
+  <p class="error-message" role="alert">
+    Đã xảy ra lỗi khi tải dữ liệu. Vui lòng thử lại.
+  </p>
+  <button type="button" id="retry-btn">Thử lại</button>
+</section>
+
   <section id="contact">
     <h2>Contact</h2>
     <p>Feel free to get in touch for collaboration or opportunities.</p>
     <a href="mailto:hello@example.com">Email Me</a>
   </section>
+
 </main>
 
 <footer role="contentinfo">
   <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
 </footer>
 <script src="theme-toggle.js"></script>
+<script src="states.js"></script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+ .empty-state {
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .empty-illustration {
+    display: block;
+    width: 64px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--border-color);
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .empty-illustration::before,
+  .empty-illustration::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    top: 12px;
+  }
+
+  .empty-illustration::before {
+    left: 14px;
+  }
+
+  .empty-illustration::after {
+    right: 14px;
+  }
+
+  .error-state {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .error-message {
+    color: var(--text-primary);
+  }
+
+  #retry-btn {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    cursor: pointer;
+  }
+
+  #retry-btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
